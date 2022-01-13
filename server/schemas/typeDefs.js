@@ -11,9 +11,9 @@ type Book {
     bookId: String
     author: [String]
     description: String
-    Title: String
-    Image: String
-    Link: String
+    title: String
+    image: String
+    link: String
 }
 
 type Auth {
@@ -24,8 +24,8 @@ type Auth {
 type Query {
     users: [User]
     user(username: String!): User
-    books(username: String): [Book]
-    book(thoughtId: ID!): Book
+    books(title: String): [Book]
+    book(title: String): Book
     me: User
   }
 
